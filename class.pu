@@ -1,0 +1,54 @@
+@startuml
+
+class ショップ <<Shop>>{
+  名前: name
+}
+class ユーザー <<User>>{
+  苗字: first_name
+  名前: last_name
+  メールアドレス: email
+  電話番号: tel
+}
+class 管理者 <<AdminUser>>{
+  名前: name
+}
+
+class 商品 <<Product>>{
+  名前: name
+  説明文: description
+  価格: price
+}
+
+class カート <<Cart>>{
+}
+
+class カート商品 <<CartItem>>{
+  product_id: product_id
+  cart_id: cart_id
+}
+
+class 注文履歴 <<Order>>{
+  user_id: user_id
+  shop_id: shop_id
+}
+
+class 注文履歴商品 <<OrderItem>>{
+  product_id: product_id
+  order_id: order_id
+}
+
+class 決済 <<Settlement>>{
+  user_id: user_id
+  order_id: order_id
+}
+
+class 出荷 <<Shipment>>{
+  送り先住所: sender_address
+  出荷日: scheduled_shipped_on
+  お届け希望日: preferred_delivery_on
+}
+
+
+@enduml
+
+' product#index → product#index → cart#show → user#register → user#confirm → order（履歴）#create
