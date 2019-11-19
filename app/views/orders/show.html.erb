@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @order.total %>
+</p>
+
+<p>
+  <strong>Item total:</strong>
+  <%= @order.item_total %>
+</p>
+
+<p>
+  <strong>Shipment total:</strong>
+  <%= @order.shipment_total %>
+</p>
+
+<p>
+  <strong>Decimal:</strong>
+  <%= @order.decimal %>
+</p>
+
+<p>
+  <strong>Payment total:</strong>
+  <%= @order.payment_total %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @order.shop %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

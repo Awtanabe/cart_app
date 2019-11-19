@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sender address:</strong>
+  <%= @shipment.sender_address %>
+</p>
+
+<p>
+  <strong>Scheduled shipped on:</strong>
+  <%= @shipment.scheduled_shipped_on %>
+</p>
+
+<p>
+  <strong>Preferred delivery on:</strong>
+  <%= @shipment.preferred_delivery_on %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @shipment.order %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

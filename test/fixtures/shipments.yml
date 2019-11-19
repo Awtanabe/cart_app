@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender_address: MyText
+  scheduled_shipped_on: 
+  preferred_delivery_on: 2019-11-19 13:53:55
+  order: one
+
+two:
+  sender_address: MyText
+  scheduled_shipped_on: 
+  preferred_delivery_on: 2019-11-19 13:53:55
+  order: two

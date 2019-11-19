@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stripe:</strong>
+  <%= @settlement.stripe_id %>
+</p>
+
+<p>
+  <strong>Card brand:</strong>
+  <%= @settlement.card_brand %>
+</p>
+
+<p>
+  <strong>Card exp month:</strong>
+  <%= @settlement.card_exp_month %>
+</p>
+
+<p>
+  <strong>Card exp year:</strong>
+  <%= @settlement.card_exp_year %>
+</p>
+
+<p>
+  <strong>Card last4:</strong>
+  <%= @settlement.card_last4 %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @settlement.user %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @settlement.order %>
+</p>
+
+<%= link_to 'Edit', edit_settlement_path(@settlement) %> |
+<%= link_to 'Back', settlements_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 9.99
+  item_total: 9.99
+  shipment_total: MyString
+  decimal: MyString
+  payment_total: 9.99
+  user: one
+  shop: one
+
+two:
+  total: 9.99
+  item_total: 9.99
+  shipment_total: MyString
+  decimal: MyString
+  payment_total: 9.99
+  user: two
+  shop: two

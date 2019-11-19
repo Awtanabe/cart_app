@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Settlements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stripe</th>
+      <th>Card brand</th>
+      <th>Card exp month</th>
+      <th>Card exp year</th>
+      <th>Card last4</th>
+      <th>User</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @settlements.each do |settlement| %>
+      <tr>
+        <td><%= settlement.stripe_id %></td>
+        <td><%= settlement.card_brand %></td>
+        <td><%= settlement.card_exp_month %></td>
+        <td><%= settlement.card_exp_year %></td>
+        <td><%= settlement.card_last4 %></td>
+        <td><%= settlement.user %></td>
+        <td><%= settlement.order %></td>
+        <td><%= link_to 'Show', settlement %></td>
+        <td><%= link_to 'Edit', edit_settlement_path(settlement) %></td>
+        <td><%= link_to 'Destroy', settlement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Settlement', new_settlement_path %>
