@@ -1,9 +1,10 @@
 <h3>確認</h3>
 
 
+<%binding.pry%>
 <%current_cart.cart_items.each do |ci|%>
   <%= ci.product.name%>
   <%= ci.product.price%>
 <%end%>
 
-<%=link_to "購入する", "/orders", method: :post, class:"btn btn-primary"%>
+<%=link_to "購入する", orders_path, method: :post, class:"btn btn-primary"%>

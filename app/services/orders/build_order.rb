@@ -1,5 +1,5 @@
 class Orders::BuildOrder
-  def self.hello
-    puts "create order"
+  def call order_params
+    order_params
   end
 end

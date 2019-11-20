@@ -30,8 +30,8 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-
-    puts Orders::BuildOrder.hello
+    binding.pry
+    order = Orders::BuildOrder.new.call params[:order_params]
 
     return
     @order = Order.new(order_params)
