@@ -30,15 +30,14 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    binding.pry
     order = Orders::BuildOrder.new.call params[:order_params]
 
-    return
-    @order = Order.new(order_params)
+    binding.pry
+    @order = Order.new(order)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to "/", notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
