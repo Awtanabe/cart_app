@@ -16,6 +16,12 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
   end
+   # GET /orders/confirm
+  def confirm
+    
+    session[:order_items]
+    @order =
+  end
 
   # GET /orders/1/edit
   def edit

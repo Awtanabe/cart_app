@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :carts do
     post :add_cart
   end
+  get "registrations/confirm", to: "registrations#confirm"
   resources :products
   resources :shops
   root "products#index"

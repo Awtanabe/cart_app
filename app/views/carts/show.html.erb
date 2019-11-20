@@ -5,5 +5,7 @@
   <%= item.product.name%>
 <%end%>
 
+
+<%= link_to '確認画面', registrations_confirm_path(cart_id: current_cart.id) %> |
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
