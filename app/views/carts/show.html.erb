@@ -4,6 +4,8 @@
 <%current_cart.cart_items.each do |item|%>
   <%= item.product.name%>
 <%end%>
+<h5>合計金額</h5>
+<%="#{current_cart.total}円"%>
 
 
 <%= link_to '確認画面', registrations_confirm_path(cart_id: current_cart.id) %> |
