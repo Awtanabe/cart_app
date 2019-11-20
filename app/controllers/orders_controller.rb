@@ -18,9 +18,9 @@ class OrdersController < ApplicationController
   end
    # GET /orders/confirm
   def confirm
-    
+
     session[:order_items]
-    @order =
+    # @order =
   end
 
   # GET /orders/1/edit
@@ -30,6 +30,10 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+
+    puts Orders::BuildOrder.hello
+
+    return
     @order = Order.new(order_params)
 
     respond_to do |format|
