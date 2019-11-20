@@ -10,6 +10,10 @@
   </head>
 
   <body>
+  <nav class="navbar bg-dark">
+    <a href="#" class="navbar-brand">Navbar</a>
+    <%= link_to "カートに", "/carts/#{current_cart.id}"%>
+  </nav>
     <%= yield %>
   </body>
 </html>
