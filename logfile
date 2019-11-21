@@ -1,0 +1,5 @@
+LOG:  database system was interrupted; last known up at 2019-11-21 11:04:48 JST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at B/C2D54758: wanted 24, got 0
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled

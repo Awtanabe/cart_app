@@ -30,9 +30,9 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    order = Orders::BuildOrder.new.call params[:order_params]
+    params[:order].permit!
+    order = {total: params[:order][:total]}.merge(user_id: current_user.id, shop_id:1)
 
-    binding.pry
     @order = Order.new(order)
 
     respond_to do |format|
