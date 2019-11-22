@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   resources :shipments
   resources :settlements
   resources :order_items
-  resources :orders
+  namespace :admin_users do
+    resources :orders
+  end
   resources :cart_items
   resources :carts do
     post :add_cart

@@ -12,7 +12,10 @@
   <body>
   <nav class="navbar bg-dark">
     <a href="#" class="navbar-brand">Navbar</a>
-    <%= link_to "カートに", "/carts/#{current_cart.id}"%>
+    <%if current_cart %>
+      <%= link_to "カートに", "/carts/#{current_cart.id}"%>
+    <%end%>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
   </nav>
     <%= yield %>
   </body>

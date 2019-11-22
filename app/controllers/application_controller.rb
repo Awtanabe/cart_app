@@ -10,10 +10,12 @@ class ApplicationController < ActionController::Base
   end
 
   def current_cart
-    if current_user.carts.nil?
-      @cart = Cart.create(user_id: current_user.id)
-    else
-      @cart = current_user.carts.last
+    if current_user
+      if current_user.carts.nil?
+        @cart = Cart.create(user_id: current_user.id)
+      else
+        @cart = current_user.carts.last
+      end
     end
   end
 end
